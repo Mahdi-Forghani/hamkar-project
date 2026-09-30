@@ -1,7 +1,5 @@
 # Hamkar
 
-> **همکار | قیمت واقعی بازار**
-
 Hamkar is a web application for businesses to search for products, discover market offers, and manage their products.
 
 **MVP project built with React, ASP.NET Core, PostgreSQL, and AI-powered services.**
@@ -107,9 +105,7 @@ sequenceDiagram
 
 ## 🤖 AI-powered Product Creation
 
-Hamkar can create product information from a product URL.
-
-The application sends the required information to the AI service and uses the generated result to populate product data.
+Hamkar can create product information from a product URL using **AvalAI**.
 
 ```mermaid
 flowchart LR
@@ -148,6 +144,8 @@ flowchart LR
 
 * Docker
 * Docker Compose
+* A **Kavenegar API Key**
+* An **AvalAI API Key**
 
 ### 1. Clone the repository
 
@@ -160,18 +158,18 @@ cd hamkar
 
 Create a `.env` file based on `.env.example`.
 
+At minimum, you need to provide:
+
 ```env
 POSTGRES_PASSWORD=your-password
+
+SMS_APIKEY=your-kavenegar-api-key
+AI_APIKEY=your-avalai-api-key
 ```
 
-Configure the required credentials for external services such as:
+> **You need an API key from both Kavenegar and AvalAI to run the complete application locally.**
 
-* Kavenegar
-* AvalAI
-* Database
-* Authentication
-
-> **Never commit secrets or `.env` files to the repository.**
+> **Never commit `.env` files, API keys, passwords, or other secrets to the repository.**
 
 ### 3. Start the application
 
@@ -201,11 +199,23 @@ Used for sending OTP messages during phone-number authentication.
 
 [Kavenegar](https://kavenegar.com?utm_source=chatgpt.com)
 
+**Required configuration:**
+
+```env
+KAVENEGAR_API_KEY=your-kavenegar-api-key
+```
+
 ### AvalAI
 
 Used for AI-powered product information extraction.
 
 [AvalAI](https://avalai.ir?utm_source=chatgpt.com)
+
+**Required configuration:**
+
+```env
+AVALAI_API_KEY=your-avalai-api-key
+```
 
 ---
 
