@@ -4,14 +4,12 @@ Hamkar is a web application for businesses to search for products, discover mark
 
 **MVP project built with React, ASP.NET Core, PostgreSQL, and AI-powered services.**
 
----
 
 ## 🔗 Links
 
 * 🌐 **Landing Page:** https://hamkar.shop
 * 💻 **Source Code:** This repository
 
----
 
 ## ✨ Features
 
@@ -22,8 +20,6 @@ Hamkar is a web application for businesses to search for products, discover mark
 * 🤖 AI-assisted product creation from a URL
 * 👥 User access management
 * 🔐 JWT-based authentication
-
----
 
 ## 🏗️ Architecture
 
@@ -45,7 +41,7 @@ flowchart TB
 
     subgraph External["External Services"]
         Kavenegar["Kavenegar<br/>OTP / SMS"]
-        AvalAI["AvalAI<br/>AI"]
+        OpenAI["OpenAi<br/>AI"]
     end
 
     User --> Web
@@ -56,10 +52,8 @@ flowchart TB
     EF --> DB
 
     API --> Kavenegar
-    API --> AvalAI
+    API --> OpenAI
 ```
-
----
 
 ## 🧰 Tech Stack
 
@@ -76,9 +70,7 @@ flowchart TB
 | Reverse Proxy    | Nginx                       |
 | Containerization | Docker + Docker Compose     |
 | SMS              | Kavenegar                   |
-| AI               | AvalAI                      |
-
----
+| AI               | OpenAI                      |
 
 ## 🔐 Authentication
 
@@ -101,18 +93,16 @@ sequenceDiagram
     Web-->>User: Authenticated
 ```
 
----
-
 ## 🤖 AI-powered Product Creation
 
-Hamkar can create product information from a product URL using **AvalAI**.
+Hamkar can create product information from a product URL using **OpenAI**.
 
 ```mermaid
 flowchart LR
     User["User"]
     URL["Product URL"]
     API["Hamkar API"]
-    AI["AvalAI"]
+    AI["OpenAI"]
     Product["Product"]
 
     User --> URL
@@ -121,8 +111,6 @@ flowchart LR
     AI --> API
     API --> Product
 ```
-
----
 
 ## 📂 Project Structure
 
@@ -136,8 +124,6 @@ flowchart LR
 └── README.md
 ```
 
----
-
 ## 🚀 Getting Started
 
 ### Prerequisites
@@ -145,7 +131,7 @@ flowchart LR
 * Docker
 * Docker Compose
 * A **Kavenegar API Key**
-* An **AvalAI API Key**
+* An **OpenAI API Key**
 
 ### 1. Clone the repository
 
@@ -164,10 +150,10 @@ At minimum, you need to provide:
 POSTGRES_PASSWORD=your-password
 
 SMS_APIKEY=your-kavenegar-api-key
-AI_APIKEY=your-avalai-api-key
+AI_APIKEY=your-open-ai-api-key
 ```
 
-> **You need an API key from both Kavenegar and AvalAI to run the complete application locally.**
+> **You need an API key from both Kavenegar and OpenAI to run the complete application locally.**
 
 > **Never commit `.env` files, API keys, passwords, or other secrets to the repository.**
 
@@ -189,15 +175,13 @@ To stop the application:
 docker compose down
 ```
 
----
-
 ## 🔌 External Services
 
 ### Kavenegar
 
 Used for sending OTP messages during phone-number authentication.
 
-[Kavenegar](https://kavenegar.com?utm_source=chatgpt.com)
+[Kavenegar](https://kavenegar.com)
 
 **Required configuration:**
 
@@ -205,19 +189,11 @@ Used for sending OTP messages during phone-number authentication.
 KAVENEGAR_API_KEY=your-kavenegar-api-key
 ```
 
-### AvalAI
-
-Used for AI-powered product information extraction.
-
-[AvalAI](https://avalai.ir?utm_source=chatgpt.com)
-
 **Required configuration:**
 
 ```env
-AVALAI_API_KEY=your-avalai-api-key
+AI_APIKEY=your-open-ai-api-key
 ```
-
----
 
 ## 🌐 Deployment
 
