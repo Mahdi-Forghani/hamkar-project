@@ -4,13 +4,6 @@ Hamkar is a web application for businesses to search for products, discover mark
 
 **MVP project built with React, ASP.NET Core, PostgreSQL, and AI-powered services.**
 
-
-## 🔗 Links
-
-* 🌐 **Landing Page:** https://hamkar.shop
-* 💻 **Source Code:** This repository
-
-
 ## ✨ Features
 
 * 🔎 Product search
@@ -20,40 +13,6 @@ Hamkar is a web application for businesses to search for products, discover mark
 * 🤖 AI-assisted product creation from a URL
 * 👥 User access management
 * 🔐 JWT-based authentication
-
-## 🏗️ Architecture
-
-```mermaid
-flowchart TB
-    User["👤 User"]
-
-    subgraph Client["Client"]
-        Web["React + Vite"]
-    end
-
-    subgraph Server["Backend"]
-        API["ASP.NET Core API"]
-        Auth["ASP.NET Core Identity"]
-        EF["Entity Framework Core"]
-    end
-
-    DB[("PostgreSQL")]
-
-    subgraph External["External Services"]
-        Kavenegar["Kavenegar<br/>OTP / SMS"]
-        OpenAI["OpenAi<br/>AI"]
-    end
-
-    User --> Web
-    Web --> API
-
-    API --> Auth
-    API --> EF
-    EF --> DB
-
-    API --> Kavenegar
-    API --> OpenAI
-```
 
 ## 🧰 Tech Stack
 
@@ -91,25 +50,6 @@ sequenceDiagram
     Web->>API: Verify OTP
     API-->>Web: JWT
     Web-->>User: Authenticated
-```
-
-## 🤖 AI-powered Product Creation
-
-Hamkar can create product information from a product URL using **OpenAI**.
-
-```mermaid
-flowchart LR
-    User["User"]
-    URL["Product URL"]
-    API["Hamkar API"]
-    AI["OpenAI"]
-    Product["Product"]
-
-    User --> URL
-    URL --> API
-    API --> AI
-    AI --> API
-    API --> Product
 ```
 
 ## 📂 Project Structure
@@ -211,8 +151,6 @@ flowchart LR
     API --> PostgreSQL[("PostgreSQL")]
 ```
 
----
-
 ## 📌 Project Status
 
 **MVP**
@@ -221,8 +159,5 @@ The current implementation focuses on the core product flow and MVP requirements
 
 It is **not intended to be a production-ready reference architecture**. Some areas such as testing, architecture, observability, security hardening, and scalability would require further work for a production environment.
 
----
-
 ## 📄 License
-
 This project is available for educational and demonstration purposes.
