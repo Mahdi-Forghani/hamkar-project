@@ -1,0 +1,815 @@
+---
+import "../styles/landing.css";
+---
+
+<!doctype html>
+<html lang="fa" dir="rtl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<title>همکار | شبکه همکاری فروشندگان</title>
+		<meta
+			name="description"
+			content="همکار، شبکه‌ای برای ارتباط فروشندگان و دسترسی به قیمت‌های واقعی بازار."
+		/>
+		<script>
+			const header = document.querySelector(".header");
+
+			const updateHeader = () => {
+				header?.classList.toggle("scrolled", window.scrollY > 10);
+			};
+
+			updateHeader();
+			window.addEventListener("scroll", updateHeader, { passive: true });
+		</script></head
+	>
+
+	<body>
+		<main class="landing">
+			<!-- Background -->
+			<div class="bg-glow bg-glow-top"></div>
+			<div class="bg-glow bg-glow-bottom"></div>
+			<div class="bg-orbit orbit-one"></div>
+			<div class="bg-orbit orbit-two"></div>
+
+			<!-- Header -->
+			<header class="header">
+				<div class="header-inner">
+					<a href="/" class="brand">
+						<svg
+							class="brand-logo"
+							viewBox="0 0 80 64"
+							xmlns="http://www.w3.org/2000/svg"
+							aria-label="همکار"
+						>
+							<defs>
+								<linearGradient
+									id="hamkar-left"
+									x1="5"
+									y1="8"
+									x2="42"
+									y2="58"
+									gradientUnits="userSpaceOnUse"
+								>
+									<stop offset="0" stop-color="#22E4FF"
+									></stop>
+									<stop offset="0.55" stop-color="#159BFF"
+									></stop>
+									<stop offset="1" stop-color="#4B5CFF"
+									></stop>
+								</linearGradient>
+
+								<linearGradient
+									id="hamkar-right"
+									x1="38"
+									y1="8"
+									x2="75"
+									y2="58"
+									gradientUnits="userSpaceOnUse"
+								>
+									<stop offset="0" stop-color="#5364FF"
+									></stop>
+									<stop offset="0.55" stop-color="#684BFF"
+									></stop>
+									<stop offset="1" stop-color="#913CFF"
+									></stop>
+								</linearGradient>
+							</defs>
+
+							<!-- سر چپ -->
+							<circle
+								cx="25"
+								cy="14"
+								r="11"
+								fill="url(#hamkar-left)"></circle>
+
+							<!-- سر راست -->
+							<circle
+								cx="55"
+								cy="14"
+								r="11"
+								fill="url(#hamkar-right)"></circle>
+
+							<!-- فرم پایین چپ -->
+							<path
+								d="
+                M 8 39
+                C 8 31.3 14.3 25 22 25
+                H 28
+                C 35.7 25 42 31.3 42 39
+                V 42
+                C 42 49.7 35.7 56 28 56
+                H 22
+                C 14.3 56 8 49.7 8 42
+                Z
+            "
+								fill="url(#hamkar-left)"></path>
+
+							<!-- فرم پایین راست -->
+							<path
+								d="
+                M 38 39
+                C 38 31.3 44.3 25 52 25
+                H 58
+                C 65.7 25 72 31.3 72 39
+                V 42
+                C 72 49.7 65.7 56 58 56
+                H 52
+                C 44.3 56 38 49.7 38 42
+                Z
+            "
+								fill="url(#hamkar-right)"></path>
+
+							<!-- حفره‌ی مرکزی لوگو -->
+							<circle cx="40" cy="40" r="9.5" fill="#06122F"
+							></circle>
+						</svg>
+
+						<span class="brand-name">همکار</span>
+					</a>
+
+					<nav class="nav">
+						<a href="#introduction">معرفی</a>
+						<a href="#how-it-works">نحوه کار</a>
+						<a href="#for-sellers">امکانات</a>
+						<a href="#access-control">امنیت و دسترسی</a>
+					</nav>
+
+					<div class="header-actions">
+						<a
+							href="https://app.hamkar.shop/login"
+							class="btn btn-outline">ورود</a
+						>
+						<a
+							href="https://app.hamkar.shop/register"
+							class="btn btn-primary btn-small"
+						>
+							ثبت‌نام
+						</a>
+					</div>
+				</div>
+			</header>
+
+			<!-- Hero -->
+			<section class="hero">
+				<div class="hero-content">
+					<div class="eyebrow">شبکه همکاران فروش</div>
+
+					<h1>
+						قیمت واقعی بازار
+						<span>از همکارانت بپرس.</span>
+					</h1>
+
+					<p class="hero-description">
+						همکار پلتفرمی برای ارتباط مستقیم فروشندگان و دسترسی سریع
+						به قیمت‌های به‌روز و واقعی بازار است.
+					</p>
+
+					<div class="hero-actions">
+						<a
+							href="https://app.hamkar.shop/register"
+							class="btn btn-primary btn-large"
+						>
+							همین حالا ثبت‌نام کن
+							<span class="arrow">←</span>
+						</a>
+
+						<a href="#introduction" class="btn btn-ghost btn-large">
+							بیشتر بدانید
+						</a>
+					</div>
+				</div>
+
+				<!-- Search Mockup -->
+				<div class="hero-visual">
+					<div class="floating-card floating-card-one">
+						<div class="mini-icon icon-document">
+							<svg viewBox="0 0 24 24">
+								<path d="M7 3h7l4 4v14H7z"></path>
+								<path d="M14 3v5h5"></path>
+								<path d="M10 13h5M10 17h5"></path>
+							</svg>
+						</div>
+					</div>
+
+					<div class="floating-card floating-card-two">
+						<div class="mini-icon icon-user">
+							<svg viewBox="0 0 24 24">
+								<circle cx="12" cy="8" r="3"></circle>
+								<path d="M5 21c.7-4 3-6 7-6s6.3 2 7 6"></path>
+							</svg>
+						</div>
+					</div>
+
+					<div class="search-panel">
+						<div class="search-input">
+							<span class="search-placeholder"
+								>جستجو در قیمت‌ها...</span
+							>
+
+							<button class="search-button">
+								<svg viewBox="0 0 24 24">
+									<circle cx="10.8" cy="10.8" r="6.8"
+									></circle>
+									<path d="m16 16 5 5"></path>
+								</svg>
+							</button>
+						</div>
+
+						<div class="offer-list">
+							<div class="offer">
+								<div class="offer-icon">
+									<span></span>
+								</div>
+
+								<div class="offer-info">
+									<strong>آیفون ۱۵</strong>
+									<span>فروشگاه موبایل مرکزی</span>
+								</div>
+
+								<div class="offer-price">
+									<strong>۵۲,۵۰۰,۰۰۰</strong>
+									<span>تومان</span>
+								</div>
+
+								<div class="phone-icon">
+									<svg viewBox="0 0 24 24">
+										<path
+											d="M6 3h4l2 5-2.5 2a13 13 0 0 0 4.5 4.5l2-2.5 5 2v4c0 1-1 2-2 2C10 20 4 14 4 5c0-1 1-2 2-2z"
+										></path>
+									</svg>
+								</div>
+							</div>
+
+							<div class="offer">
+								<div class="offer-icon offer-icon-purple">
+									<span></span>
+								</div>
+
+								<div class="offer-info">
+									<strong>سامسونگ S24 Ultra</strong>
+									<span>موبایل پارس</span>
+								</div>
+
+								<div class="offer-price">
+									<strong>۷۸,۲۰۰,۰۰۰</strong>
+									<span>تومان</span>
+								</div>
+
+								<div class="phone-icon">
+									<svg viewBox="0 0 24 24">
+										<path
+											d="M6 3h4l2 5-2.5 2a13 13 0 0 0 4.5 4.5l2-2.5 5 2v4c0 1-1 2-2 2C10 20 4 14 4 5c0-1 1-2 2-2z"
+										></path>
+									</svg>
+								</div>
+							</div>
+
+							<div class="offer">
+								<div class="offer-icon offer-icon-blue">
+									<span></span>
+								</div>
+
+								<div class="offer-info">
+									<strong>Apple Watch</strong>
+									<span>دیجیتال مارکت</span>
+								</div>
+
+								<div class="offer-price">
+									<strong>۲۴,۹۰۰,۰۰۰</strong>
+									<span>تومان</span>
+								</div>
+
+								<div class="phone-icon">
+									<svg viewBox="0 0 24 24">
+										<path
+											d="M6 3h4l2 5-2.5 2a13 13 0 0 0 4.5 4.5l2-2.5 5 2v4c0 1-1 2-2 2C10 20 4 14 4 5c0-1 1-2 2-2z"
+										></path>
+									</svg>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Problem -->
+			<section id="introduction" class="introduction section">
+				<div class="introduction-content">
+					<div class="section-label">همکار چیست؟</div>
+
+					<h2>
+						قیمت‌های همکارانت را
+						<span>یکجا پیدا کن.</span>
+					</h2>
+
+					<p>
+						همکار یک شبکه برای فروشندگان است تا به‌جای پرسیدن قیمت
+						از چند نفر، بتوانند قیمت‌های به‌روز محصولات را از
+						همکارانشان پیدا کنند.
+					</p>
+
+					<p>
+						هر فروشنده خودش تعیین می‌کند چه کسانی به قیمت‌هایش
+						دسترسی داشته باشند؛ بنابراین اطلاعات قیمت‌ها فقط در
+						اختیار همکاران مورد اعتماد قرار می‌گیرد.
+					</p>
+				</div>
+
+				<div class="introduction-visual">
+					<div class="intro-card">
+						<div class="intro-card-header">
+							<span>قیمت‌های امروز</span>
+							<span class="intro-status">به‌روز</span>
+						</div>
+
+						<div class="intro-offer">
+							<div class="intro-product">
+								<strong>آیفون ۱۵</strong>
+								<span>موبایل مرکزی</span>
+							</div>
+
+							<div class="intro-price">
+								<strong>۵۲,۵۰۰,۰۰۰</strong>
+								<span>تومان</span>
+							</div>
+						</div>
+
+						<div class="intro-offer">
+							<div class="intro-product">
+								<strong>سامسونگ S24 Ultra</strong>
+								<span>موبایل پارس</span>
+							</div>
+
+							<div class="intro-price">
+								<strong>۷۸,۲۰۰,۰۰۰</strong>
+								<span>تومان</span>
+							</div>
+						</div>
+
+						<div class="intro-offer">
+							<div class="intro-product">
+								<strong>Apple Watch</strong>
+								<span>دیجیتال مارکت</span>
+							</div>
+
+							<div class="intro-price">
+								<strong>۲۴,۹۰۰,۰۰۰</strong>
+								<span>تومان</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- How it works -->
+			<section id="how-it-works" class="how section">
+				<div class="center-heading">
+					<div class="section-label">نحوه کار</div>
+
+					<h2>
+						شروع کار با همکار
+						<span>ساده‌تر از چیزی است که فکر می‌کنی.</span>
+					</h2>
+
+					<p>
+						در چند قدم ساده به قیمت‌های به‌روز همکارانت دسترسی پیدا
+						کن.
+					</p>
+				</div>
+
+				<div class="steps">
+					<div class="step">
+						<div class="step-number">۱</div>
+
+						<div class="step-content">
+							<h3>ثبت‌نام کن</h3>
+							<p>
+								با شماره موبایل ثبت‌نام کن و پروفایل فروشندگی
+								خودت را بساز.
+							</p>
+						</div>
+					</div>
+
+					<div class="step-line"></div>
+
+					<div class="step">
+						<div class="step-number">۲</div>
+
+						<div class="step-content">
+							<h3>همکارت را پیدا کن</h3>
+							<p>
+								فروشندگان موردنظرت را جستجو کن و پروفایل آن‌ها
+								را ببین.
+							</p>
+						</div>
+					</div>
+
+					<div class="step-line"></div>
+
+					<div class="step">
+						<div class="step-number">۳</div>
+
+						<div class="step-content">
+							<h3>درخواست دسترسی بده</h3>
+							<p>
+								برای دیدن قیمت‌های یک فروشنده، درخواست دسترسی
+								ارسال کن.
+							</p>
+						</div>
+					</div>
+
+					<div class="step-line"></div>
+
+					<div class="step">
+						<div class="step-number">۴</div>
+
+						<div class="step-content">
+							<h3>قیمت‌ها را ببین</h3>
+							<p>
+								بعد از تأیید، قیمت‌های به‌روز محصولات آن فروشنده
+								را ببین.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- <section id="why-hamkar" class="why-hamkar section">
+				<div class="center-heading">
+					<div class="section-label">چرا همکار؟</div>
+
+					<h2>
+						کمتر بپرس،
+						<span>سریع‌تر پیدا کن.</span>
+					</h2>
+
+					<p>
+						همکار، جست‌وجوی قیمت را از یک گفت‌وگوی پراکنده به یک
+						جست‌وجوی ساده و سریع تبدیل می‌کند.
+					</p>
+				</div>
+
+				<div class="why-grid">
+					<article class="why-card">
+						<div class="why-icon">
+							<svg viewBox="0 0 24 24">
+								<circle cx="10.5" cy="10.5" r="6.5"></circle>
+								<path d="m16 16 5 5"></path>
+							</svg>
+						</div>
+
+						<h3>پیدا کردن سریع قیمت</h3>
+
+						<p>
+							به‌جای پرسیدن از چند همکار، محصول موردنظرت را جستجو
+							کن و قیمت‌های موجود را ببین.
+						</p>
+					</article>
+
+					<article class="why-card">
+						<div class="why-icon">
+							<svg viewBox="0 0 24 24">
+								<circle cx="12" cy="12" r="8"></circle>
+								<path d="M12 7v5l3 2"></path>
+							</svg>
+						</div>
+						<h3>قیمت‌های به‌روز</h3>
+
+						<p>
+							قیمت‌ها تاریخ انقضا دارند و اطلاعات قدیمی در نتایج
+							جستجو باقی نمی‌مانند.
+						</p>
+					</article>
+
+					<article class="why-card">
+						<div class="why-icon">
+							<svg viewBox="0 0 24 24">
+								<path
+									d="M7 4h10a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-5l-4 4v-4H7a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"
+								></path>
+								<path d="M8 9h8M8 12h5"></path>
+							</svg>
+						</div>
+						<h3>ارتباط مستقیم</h3>
+
+						<p>
+							قیمت را از خود فروشنده ببین و در صورت نیاز مستقیماً
+							با او ارتباط بگیر.
+						</p>
+					</article>
+
+					<article class="why-card">
+						<div class="why-icon">
+							<svg viewBox="0 0 24 24">
+								<rect x="5" y="10" width="14" height="10" rx="2"
+								></rect>
+								<path d="M8 10V7a4 4 0 0 1 8 0v3"></path>
+								<circle cx="12" cy="15" r="1"></circle>
+							</svg>
+						</div>
+
+						<h3>دسترسی تحت کنترل</h3>
+
+						<p>
+							هر فروشنده خودش تعیین می‌کند چه کسانی بتوانند
+							قیمت‌هایش را ببینند.
+						</p>
+					</article>
+				</div>
+			</section> -->
+
+			<section id="for-sellers" class="for-sellers section">
+				<div class="for-sellers-content">
+					<div class="section-label">برای فروشندگان</div>
+
+					<h2>
+						خرید و فروش بین فروشندگان،
+						<span>ساده‌تر از همیشه.</span>
+					</h2>
+
+					<p>
+						همکار کمک می‌کند قیمت‌ها و همکاران موردنظرت را سریع‌تر
+						پیدا کنی و قیمت‌های خودت را با افراد مورد اعتمادت به
+						اشتراک بگذاری.
+					</p>
+
+					<div class="seller-use-cases">
+						<div class="seller-use-case">
+							<div class="use-case-icon">
+								<svg viewBox="0 0 24 24">
+									<path d="M4 5h16v12H4z"></path>
+									<path d="M8 21h8M12 17v4"></path>
+								</svg>
+							</div>
+
+							<div>
+								<strong>دنبال محصولی هستی؟</strong>
+								<p>قیمت همکارانت را سریع پیدا کن.</p>
+							</div>
+						</div>
+
+						<div class="seller-use-case">
+							<div class="use-case-icon">
+								<svg viewBox="0 0 24 24">
+									<path d="M6 4h12v16H6z"></path>
+									<path d="M9 8h6M9 12h6M9 16h4"></path>
+								</svg>
+							</div>
+
+							<div>
+								<strong>محصولی برای فروش داری؟</strong>
+								<p>قیمتت را با همکارانت به اشتراک بگذار.</p>
+							</div>
+						</div>
+
+						<div class="seller-use-case">
+							<div class="use-case-icon">
+								<svg viewBox="0 0 24 24">
+									<circle cx="9" cy="8" r="3"></circle>
+									<path d="M3 20c.6-4 2.6-6 6-6s5.4 2 6 6"
+									></path>
+									<path d="M16 11a3 3 0 1 0 0-6"></path>
+									<path d="M17 14c2.2.5 3.5 2.5 4 6"></path>
+								</svg>
+							</div>
+
+							<div>
+								<strong>دنبال همکار خاصی هستی؟</strong>
+								<p>همکار موردنظرت را راحت پیدا کن.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="for-sellers-visual">
+					<div class="seller-visual-card">
+						<span class="visual-label">جستجوی محصول</span>
+
+						<div class="visual-search">
+							<span>آیفون ۱۵</span>
+
+							<svg viewBox="0 0 24 24">
+								<circle cx="10.8" cy="10.8" r="6.8"></circle>
+								<path d="m16 16 5 5"></path>
+							</svg>
+						</div>
+
+						<div class="visual-result">
+							<div>
+								<strong>موبایل مرکزی</strong>
+								<span>قیمت امروز</span>
+							</div>
+
+							<strong>۵۲,۵۰۰,۰۰۰</strong>
+						</div>
+
+						<div class="visual-result">
+							<div>
+								<strong>موبایل پارس</strong>
+								<span>قیمت امروز</span>
+							</div>
+
+							<strong>۵۳,۱۰۰,۰۰۰</strong>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="access-control" class="access-control section">
+				<div class="access-control-visual">
+					<div class="access-card">
+						<div class="access-card-icon">
+							<svg viewBox="0 0 24 24">
+								<rect x="5" y="10" width="14" height="10" rx="2"
+								></rect>
+								<path d="M8 10V7a4 4 0 0 1 8 0v3"></path>
+							</svg>
+						</div>
+
+						<div class="access-card-content">
+							<strong>دسترسی به قیمت‌ها</strong>
+							<span>فقط برای همکاران مورد اعتماد</span>
+						</div>
+
+						<div class="access-check">✓</div>
+					</div>
+				</div>
+
+				<div class="access-control-content">
+					<div class="section-label">امنیت و دسترسی</div>
+
+					<h2>
+						قیمت‌هایت را
+						<span>خودت کنترل کن.</span>
+					</h2>
+
+					<p>
+						هر فروشنده خودش تصمیم می‌گیرد چه کسی بتواند قیمت‌هایش را
+						ببیند.
+					</p>
+
+					<div class="access-points">
+						<div>
+							<strong>دسترسی با تأیید تو</strong>
+							<span
+								>فقط همکارانی که تأیید می‌کنی قیمت‌هایت را
+								می‌بینند.</span
+							>
+						</div>
+
+						<div>
+							<strong>قیمت‌های همیشه به‌روز</strong>
+							<span>قیمت‌ها پس از ۲۴ ساعت منقضی می‌شوند.</span>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- CTA -->
+			<section class="final-cta section">
+				<div class="final-cta-content">
+					<h2>
+						<span>آماده‌ای همکار رو امتحان کنی؟</span>
+					</h2>
+
+					<p>یک ماه رایگان از همکار استفاده کن.</p>
+
+					<a
+						href="https://app.hamkar.shop/register"
+						class="primary-btn final-cta-button"
+					>
+						ساخت اکانت رایگان
+					</a>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="footer-inner">
+				<div class="footer-brand">
+					<a href="/" class="brand">
+						<svg
+							class="brand-logo"
+							viewBox="0 0 80 64"
+							xmlns="http://www.w3.org/2000/svg"
+							aria-label="همکار"
+						>
+							<defs>
+								<linearGradient
+									id="hamkar-left"
+									x1="5"
+									y1="8"
+									x2="42"
+									y2="58"
+									gradientUnits="userSpaceOnUse"
+								>
+									<stop offset="0" stop-color="#22E4FF"
+									></stop>
+									<stop offset="0.55" stop-color="#159BFF"
+									></stop>
+									<stop offset="1" stop-color="#4B5CFF"
+									></stop>
+								</linearGradient>
+
+								<linearGradient
+									id="hamkar-right"
+									x1="38"
+									y1="8"
+									x2="75"
+									y2="58"
+									gradientUnits="userSpaceOnUse"
+								>
+									<stop offset="0" stop-color="#5364FF"
+									></stop>
+									<stop offset="0.55" stop-color="#684BFF"
+									></stop>
+									<stop offset="1" stop-color="#913CFF"
+									></stop>
+								</linearGradient>
+							</defs>
+
+							<!-- سر چپ -->
+							<circle
+								cx="25"
+								cy="14"
+								r="11"
+								fill="url(#hamkar-left)"></circle>
+
+							<!-- سر راست -->
+							<circle
+								cx="55"
+								cy="14"
+								r="11"
+								fill="url(#hamkar-right)"></circle>
+
+							<!-- فرم پایین چپ -->
+							<path
+								d="
+                M 8 39
+                C 8 31.3 14.3 25 22 25
+                H 28
+                C 35.7 25 42 31.3 42 39
+                V 42
+                C 42 49.7 35.7 56 28 56
+                H 22
+                C 14.3 56 8 49.7 8 42
+                Z
+            "
+								fill="url(#hamkar-left)"></path>
+
+							<!-- فرم پایین راست -->
+							<path
+								d="
+                M 38 39
+                C 38 31.3 44.3 25 52 25
+                H 58
+                C 65.7 25 72 31.3 72 39
+                V 42
+                C 72 49.7 65.7 56 58 56
+                H 52
+                C 44.3 56 38 49.7 38 42
+                Z
+            "
+								fill="url(#hamkar-right)"></path>
+
+							<!-- حفره‌ی مرکزی لوگو -->
+							<circle cx="40" cy="40" r="9.5" fill="#06122F"
+							></circle>
+						</svg>
+
+						<span class="brand-name">همکار</span>
+					</a>
+					<p>شبکه‌ای برای ساده‌تر شدن خرید و فروش بین فروشندگان.</p>
+
+					<a
+						href="https://trustseal.enamad.ir/?id=7881487&Code=DryzUfnYbfFqxzw7HUYhNWmvebjmRUzS"
+						target="_blank"
+						rel="noopener noreferrer"
+						referrerpolicy="origin"
+						class="enamad"
+					>
+						<img
+							src="https://trustseal.enamad.ir/logo.aspx?id=7881487&Code=DryzUfnYbfFqxzw7HUYhNWmvebjmRUzS"
+							alt="نماد اعتماد الکترونیکی"
+							class="enamad-logo"
+						/>
+					</a>
+				</div>
+
+				<nav class="nav">
+					<a href="#introduction">معرفی</a>
+					<a href="#how-it-works">نحوه کار</a>
+					<a href="#for-sellers">امکانات</a>
+					<a href="#access-control">امنیت و دسترسی</a>
+				</nav>
+			</div>
+
+			<div class="footer-bottom">
+				<span>© ۱۴۰۵ همکار</span>
+				<span>ساخته شده برای فروشندگان</span>
+			</div>
+		</footer>
+	</body>
+</html>

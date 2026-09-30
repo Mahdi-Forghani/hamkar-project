@@ -1,0 +1,36 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/*
+# Local environment files and secrets
+.env
+.env.*
+!.env.example
+!**/.env.example
+
+# Local databases and generated application data
+postgres_data/
+**/debug/
+**/.astro/
+
+# IDE and OS files
+.vs/
+.vscode/
+.idea/
+.DS_Store
+
+# Build and dependency output
+**/node_modules/
+**/dist/
+**/bin/
+**/obj/
+
+# TLS certificates and private keys
+nginx/ssl/
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore

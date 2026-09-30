@@ -1,0 +1,73 @@
+services:
+  nginx:
+    restart: always
+    image: nginx:alpine
+    depends_on:
+      - frontend
+      - backend
+      - landing
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./nginx/ssl:/etc/nginx/ssl:ro
+    networks:
+      - hamkar
+
+  backend:
+    restart: always
+    build:
+      context: ./hamkar.api
+    environment:
+      ConnectionStrings__DefaultConnection: Host=postgres;Port=5432;Database=hamkar;Username=hamkar;Password=${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+      Jwt__Key: ${JWT_KEY:?Set JWT_KEY in .env}
+      AI__ApiKey: ${AvalAI_ApiKey:?Set AvalAI_ApiKey in .env}
+      Sms__ApiKey: ${Sms_ApiKey:?Set Sms_ApiKey in .env}
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - hamkar
+      - apex
+
+  frontend:
+    restart: always
+    build:
+      context: ./hamkar.web
+    networks:
+      - hamkar
+
+  landing:
+    restart: always
+    build:
+      context: ./landing
+    networks:
+      - hamkar
+
+  postgres:
+    restart: always
+    image: postgres:17
+    environment:
+      POSTGRES_DB: hamkar
+      POSTGRES_USER: hamkar
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U hamkar -d hamkar" ]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    networks:
+      - apex
+
+volumes:
+  postgres_data:
+  frontend_dist:
+
+networks:
+  hamkar:
+  apex:
+    external: true
+    name: apex

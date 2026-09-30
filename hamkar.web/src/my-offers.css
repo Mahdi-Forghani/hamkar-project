@@ -1,0 +1,71 @@
+@media (max-width: 600px) {
+  .my-offers-list .ant-list-item {
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 12px;
+    padding: 14px;
+  }
+
+  .my-offers-list .ant-list-item>.ant-space {
+    min-width: 0;
+    flex: 1;
+  }
+
+  .my-offers-list .ant-list-item-action {
+    flex: 0 0 auto;
+
+    display: flex;
+    align-items: center;
+    gap: 2px;
+
+    margin: 0;
+    padding: 0;
+  }
+
+  .my-offers-list .ant-list-item-action>li {
+    padding: 0;
+  }
+
+  .my-offers-list .ant-list-item-action .ant-btn {
+    width: 36px;
+    height: 36px;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+
+    color: var(--color-text-secondary);
+  }
+
+  .my-offers-list .ant-list-item-action .ant-btn:hover {
+    background: var(--color-surface-hover);
+    color: var(--color-text);
+  }
+
+  .my-offers-list .ant-list-item-action .ant-btn.ant-btn-dangerous {
+    color: #ff4d4f;
+  }
+
+  .my-offers-list .ant-list-item-action .ant-btn.ant-btn-dangerous:hover {
+    background: rgba(255, 77, 79, 0.08);
+    color: #ff4d4f;
+  }
+}
+
+@media (max-width: 600px) {
+  .my-offers-list .ant-list-item-action-split {
+    display: none;
+  }
+  
+  .my-offers-list .ant-list-item {
+    padding: 10px 12px;
+  }
+}

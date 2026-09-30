@@ -1,0 +1,36 @@
+// Global using directives
+
+global using Hamkar.Api;
+global using Hamkar.Api.Data;
+global using Hamkar.Api.Entities;
+global using Hamkar.Api.Extensions;
+global using Hamkar.Api.Factory;
+global using Hamkar.Api.Middlewares;
+global using Hamkar.Api.Models.Requests;
+global using Hamkar.Api.Models.Results;
+global using Hamkar.Api.Services;
+global using Kavenegar;
+global using Kavenegar.Core.Exceptions;
+global using Microsoft.AspNetCore.Authentication.JwtBearer;
+global using Microsoft.AspNetCore.Authorization;
+global using Microsoft.AspNetCore.Identity;
+global using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+global using Microsoft.AspNetCore.Mvc;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.IdentityModel.Tokens;
+global using Microsoft.OpenApi;
+global using Microsoft.Playwright;
+global using OpenAI;
+global using OpenAI.Chat;
+global using OpenAI.Responses;
+global using System.ClientModel;
+global using System.Collections.Concurrent;
+global using System.Diagnostics;
+global using System.IdentityModel.Tokens.Jwt;
+global using System.Net;
+global using System.Security.Claims;
+global using System.Text;
+global using System.Text.Json;
+global using ApiException = Hamkar.Api.Exceptions.ApiException;
+global using LoginRequest = Hamkar.Api.Models.Requests.LoginRequest;
+global using RegisterRequest = Hamkar.Api.Models.Requests.RegisterRequest;

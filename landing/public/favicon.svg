@@ -1,0 +1,44 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+	<defs>
+		<linearGradient
+			id="left"
+			x1="8"
+			y1="6"
+			x2="34"
+			y2="58"
+			gradientUnits="userSpaceOnUse"
+		>
+			<stop offset="0" stop-color="#22E4FF"/>
+			<stop offset="0.55" stop-color="#159BFF"/>
+			<stop offset="1" stop-color="#4B5CFF"/>
+		</linearGradient>
+
+		<linearGradient
+			id="right"
+			x1="30"
+			y1="6"
+			x2="58"
+			y2="58"
+			gradientUnits="userSpaceOnUse"
+		>
+			<stop offset="0" stop-color="#5364FF"/>
+			<stop offset="0.55" stop-color="#684BFF"/>
+			<stop offset="1" stop-color="#913CFF"/>
+		</linearGradient>
+	</defs>
+
+	<circle cx="20" cy="13" r="10" fill="url(#left)"/>
+	<circle cx="44" cy="13" r="10" fill="url(#right)"/>
+
+	<path
+		d="M6 38C6 30.268 12.268 24 20 24H24C31.732 24 38 30.268 38 38V41C38 48.732 31.732 55 24 55H20C12.268 55 6 48.732 6 41V38Z"
+		fill="url(#left)"
+	/>
+
+	<path
+		d="M26 38C26 30.268 32.268 24 40 24H44C51.732 24 58 30.268 58 38V41C58 48.732 51.732 55 44 55H40C32.268 55 26 48.732 26 41V38Z"
+		fill="url(#right)"
+	/>
+
+	<circle cx="32" cy="40" r="8.5" fill="transparent"/>
+</svg>

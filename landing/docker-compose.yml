@@ -1,0 +1,9 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: hamkar-landing
+    restart: unless-stopped
+    ports:
+      - "8090:80"
